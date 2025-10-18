@@ -1,0 +1,87 @@
+/* Problem A — Responsive Splash Page
+   mobile-first; selectors match the provided HTML exactly. */
+
+/* ----- base (xs: <598px) ----- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: .5rem;              
+  background: #93b8d7;        
+  color: #fff;                
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+nav a {
+  color: #fff;
+  font-size: 2.5rem;          
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: .5em;         
+}
+
+#hamburger-menu { display: inline-block; }
+#social-links   { display: none; }
+
+main {
+  text-align: center;
+  font-family: "Kaushan Script", fantasy;
+  margin-top: 23vh;
+}
+
+main h1 {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin: 0;
+}
+
+main h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 2em 0 0 0;
+}
+
+footer { display: none; }
+
+/* ----- small (sm: ≥598px) ----- */
+@media (min-width: 598px) {
+  #hamburger-menu { display: none; }
+  #social-links   { display: block; }
+}
+
+/* ----- medium (md: ≥768px) ----- */
+@media (min-width: 768px) {
+  html { height: 100%; }
+  body {
+    margin: 0;
+    background: url("../img/splash-md.jpg") center / cover no-repeat;
+    color: #fff;
+  }
+  main {
+    text-shadow: 1px 1px 0 #153c43;
+    margin-top: 23vh;
+  }
+  footer {
+    display: block;
+    position: fixed;
+    right: .5rem;
+    bottom: .5rem;
+    font: 12px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    opacity: .9;
+  }
+}
+
+/* ----- large (lg: ≥992px) ----- */
+@media (min-width: 992px) {
+  body { background-image: url("../img/splash-lg.jpg"); }
+  nav a { font-size: 1.5rem; }
+  main h1 { font-size: 5rem; }
+  main h2 { font-size: 3rem; margin-top: 2em; }
+}
+
+/* ----- extra-large (xl: ≥1200px) ----- */
+@media (min-width: 1200px) {
+  body { background-image: url("../img/splash-xl.jpg"); }
+}
